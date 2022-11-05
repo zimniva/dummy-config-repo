@@ -15,8 +15,6 @@ jobs:
 
     steps:
       - name: curl
-        with:
-          ACCESS_TOKEN: ${{ secrets.CI_TOKEN }}
         run: |
           curl \
             -X POST \
