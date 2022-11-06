@@ -16,9 +16,4 @@ jobs:
     steps:
       - name: curl
         run: |
-          curl \
-            -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.CI_TOKEN }}" \
-            https://api.github.com/repos/zimniva/example-ci/dispatches \
-            -d '{"event_type":"on-demand-test"}'
+          curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.CI_TOKEN }}" https://api.github.com/repos/zimniva/example-ci/dispatches -d '{"event_type":"on-demand-test"}'
